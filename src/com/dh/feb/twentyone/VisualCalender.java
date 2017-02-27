@@ -19,45 +19,37 @@ public class VisualCalender {
 		Scanner scanner = new Scanner(System.in);
 	
 		String time = scanner.nextLine().toString();
-		//String  time = "2017-2-23";
-		DateFormat nowdate = new SimpleDateFormat("yyyy-MM-dd");
-		//日期格式
-		Calendar calendar = new GregorianCalendar();
+		int i;
 		
 		//设置格式
 		try {
-			Date date = nowdate.parse(time);
+			//String  time = "2017-2-10";
+			DateFormat nowdate = new SimpleDateFormat("yyyy-MM-dd");
+			//日期格式
+			Calendar calendar = new GregorianCalendar();
+			Date date1 = nowdate.parse(time);
 			
 			//字符串转换为日期
-			calendar.setTime(date);
+			calendar.setTime(date1);
 			int day = calendar.get(Calendar.DATE);
-			//System.out.println("day="+day+"  Calendar.DATE="+Calendar.DATE);
-			//将日期设置到calendar对象  
-			calendar.set(calendar.DAY_OF_MONTH, 1);
-
-			//System.out.println(calendar.get(calendar.DAY_OF_WEEK));
-		
-			//System.out.println(calendar.getActualMaximum(calendar.DATE));
-			System.out.println(calendar.get(calendar.DAY_OF_WEEK));
-			System.out.println(calendar.getActualMaximum(calendar.DATE));
-			System.out.println("一\t二\t三\t四\t五\t六\t日");
-			for(int j=1;j<calendar.get(calendar.DAY_OF_WEEK)-1;j++){
+			//System.out.println(day);
+			calendar.set(Calendar.DAY_OF_MONTH, 1);
+			int max=calendar.getActualMaximum(Calendar.DATE);
+			System.out.println("日\t一\t二\t三\t四\t五\t六");
+			for(int j=1;j<calendar.get(Calendar.DAY_OF_WEEK);j++){
 				System.out.print("\t");
-			}
-			//System.out.println(calendar.get(calendar.SATURDAY));
-			for(int i=1;i<=calendar.getActualMaximum(calendar.DATE);i++){
-				if(i==day){
-					System.out.print("+");
-				}
+			}//calendar.getActualMaximum(Calendar.DATE)
+			for(i=1;i<=max;i++){
+				if(i==day)
+					System.out.print("*");
 				System.out.print(i+"\t");
-				int nowday = calendar.get(calendar.DAY_OF_WEEK);
-				//System.out.print(nowday);
-				//System.out.println(calendar.SUNDAY);
-				if(nowday==calendar.SUNDAY)
-				System.out.print("\n");
-				calendar.add(calendar.DATE, 1);
+
+				if(calendar.get(Calendar.DAY_OF_WEEK)==calendar.SATURDAY){
+					System.out.print("\n");
+				}
+				calendar.add(Calendar.DATE, 1);
+				
 			}
-		
 			
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
