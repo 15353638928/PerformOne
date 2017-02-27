@@ -8,15 +8,11 @@ public class FileTest {
 	public static void main(String[] args) {
 		File f = new File("C:/Users/admin-DH/Pictures/padÕÕÆ¬/001.JPG");
 		File f1 = new File("C:/Users");
-		File f3 = new File("D:/workspace");
+		File f3 = new File("D:/java");
 		
-		File f2 = new File(f3,"998.txt");
-		try {
-			f2.createNewFile();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		File f2 = new File(f3,"/Ja/Va/JV");
+		f2.mkdirs();
+		
 		if(f.isFile()){
 			System.out.println("ÊÇÎÄ¼þ");
 		}
