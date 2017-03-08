@@ -2,6 +2,7 @@ package com.dh.mar.lastfewdays;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 import com.dh.mar.fourth.TestLength;
@@ -99,6 +100,7 @@ public class ArrarylistTest {
 		System.out.println("hhhhhhhhhhhhhhhhhhhhh");
 		for(int i=0;i<list.size;i++)
 			System.out.println(list.get(i));
+		
 	}
 	
 	
