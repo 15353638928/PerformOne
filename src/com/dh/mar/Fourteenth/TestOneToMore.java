@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 /**
- * 一对多实现，分拣存储
+ * 一对多实现，分拣存储,通过普通方法实现
  * @author admin-DH
  *
  */
