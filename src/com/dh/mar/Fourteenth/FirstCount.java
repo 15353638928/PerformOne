@@ -1,3 +1,14 @@
+package com.dh.mar.Fourteenth;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+/**
+ * map ËÄÖÖ±éÀú·½·¨
+ * @author admin-DH
+ *
+ */
 public class FirstCount {
 	public static void main(String[] args) {
 		String[] arr = "you are right? you are wrong? you are fin? you are better!".split(" ");
@@ -9,25 +20,25 @@ public class FirstCount {
 				aMap.put(key, aMap.get(key)+1);
 			}
 		}
-		//ç¬¬ä¸€ç§ï¼šæ™®éä½¿ç”¨ï¼ŒäºŒæ¬¡å–å€¼
-		System.out.println("é€šè¿‡Map.keySetéå†keyå’Œvalueï¼š");
+		//µÚÒ»ÖÖ£ºÆÕ±éÊ¹ÓÃ£¬¶ş´ÎÈ¡Öµ
+		System.out.println("Í¨¹ıMap.keySet±éÀúkeyºÍvalue£º");
 		for(String key:aMap.keySet()){
-			System.out.println(key+"æ•°å­—:"+aMap.get(key));
+			System.out.println(key+"Êı×Ö:"+aMap.get(key));
 		}
-		//ç¬¬äºŒç§
-		 System.out.println("é€šè¿‡Map.entrySetä½¿ç”¨iteratoréå†keyå’Œvalueï¼š");
+		//µÚ¶şÖÖ
+		 System.out.println("Í¨¹ıMap.entrySetÊ¹ÓÃiterator±éÀúkeyºÍvalue£º");
 		 Iterator<Map.Entry<String, Integer>> iterator = aMap.entrySet().iterator();
 		 while(iterator.hasNext()){
 			 Map.Entry<String, Integer> entry = iterator.next();
 			 System.out.println("key="+entry.getKey()+"   value="+entry.getValue());
 		 }
-		//ç¬¬ä¸‰ç§ï¼šæ¨èï¼Œå°¤å…¶æ˜¯å®¹é‡å¤§æ—¶
-		  System.out.println("é€šè¿‡Map.entrySetéå†keyå’Œvalue");
+		//µÚÈıÖÖ£ºÍÆ¼ö£¬ÓÈÆäÊÇÈİÁ¿´óÊ±
+		  System.out.println("Í¨¹ıMap.entrySet±éÀúkeyºÍvalue");
 		  for(Map.Entry<String, Integer> entry:aMap.entrySet()){
 			  System.out.println("key="+entry.getKey()+"   value="+entry.getValue());
 		  }
-		//ç¬¬å››ç§
-		  System.out.println("é€šè¿‡Map.values()éå†æ‰€æœ‰çš„valueï¼Œä½†ä¸èƒ½éå†key");
+		//µÚËÄÖÖ
+		  System.out.println("Í¨¹ıMap.values()±éÀúËùÓĞµÄvalue£¬µ«²»ÄÜ±éÀúkey");
 		  for(Integer integer:aMap.values()){
 			  System.out.println(integer);
 		  }
