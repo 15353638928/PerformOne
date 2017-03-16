@@ -28,4 +28,7 @@ public class Student {
 		this.no = no;
 		this.score = score;
 	}
+	public Student() {
+		
+	}
 }
