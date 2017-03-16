@@ -47,15 +47,21 @@ public class TestT{
 	}
 	public static List<Student> exam(){
 		List<Student> slist = new ArrayList<Student>();
-		if(null==slist){
-			slist.add(new Student("1", "班级1", 80));
-			slist.add(new Student("2", "班级1", 80));
-			slist.add(new Student("3", "班级1", 80));
-			slist.add(new Student("4", "班级1", 80));
-			slist.add(new Student("11", "班级2", 70));
-			slist.add(new Student("22", "班级2", 70));
-		}
-		//你定义了一个变量如int egotong=0;但是你后面根本就没有使用到这个变量，这一行的前面会有一个黄色的警告标志，你将鼠标移动到上面会提示“这个变量从未被使用”，你用上面的标注后就没有这个提示了。
+		slist.add(new Student("1", "班级1", 80));
+		slist.add(new Student("2", "班级1", 80));
+		slist.add(new Student("3", "班级1", 80));
+		slist.add(new Student("4", "班级1", 80));
+		slist.add(new Student("11", "班级2", 70));
+		slist.add(new Student("22", "班级2", 70));
+		//		if(null==slist){
+		//			slist.add(new Student("1", "班级1", 80));
+		//			slist.add(new Student("2", "班级1", 80));
+		//			slist.add(new Student("3", "班级1", 80));
+		//			slist.add(new Student("4", "班级1", 80));
+		//			slist.add(new Student("11", "班级2", 70));
+		//			slist.add(new Student("22", "班级2", 70));
+		//		}
+		//你定义了一个变量如int egotong=0;但是你后面根本就没有使用到这个变量，这一行的前面会有一个黄色的警告标志(@SuppressWarnings("unused")），你将鼠标移动到上面会提示“这个变量从未被使用”，你用上面的标注后就没有这个提示了。
 		//就比如说此例子中的slist虽然定义了，但是if语句判断之后，根本就没用slist变量
 		System.out.println(slist.size());
 		return slist;
